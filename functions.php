@@ -99,13 +99,16 @@ function sorrisodambrosio_setup() {
 	 *
 	 * @link https://codex.wordpress.org/Theme_Logo
 	 */
+	$logo_width  = 300;
+	$logo_height = 100;
 	add_theme_support(
 		'custom-logo',
 		array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
+			'height'               => $logo_height,
+			'width'                => $logo_width,
+			'flex-width'           => true,
+			'flex-height'          => true,
+			'unlink-homepage-logo' => true,
 		)
 	);
 }
@@ -155,7 +158,7 @@ function sorrisodambrosio_scripts() {
 	wp_style_add_data( 'sorrisodambrosio-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'sorrisodambrosio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/library/js/bootstrap.min.js', ['jquery'], '5.3.1', true );
+	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/library/js/bootstrap.bundle.js', [], '5.3.1', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

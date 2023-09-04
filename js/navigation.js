@@ -97,3 +97,21 @@
 		}
 	}
 }() );
+
+// Navbar on hover  
+jQuery.noConflict()(function ($) {
+    // Your code here
+});
+jQuery(document).ready(function ($) {
+    // Enable Bootstrap submenu hover effect
+    $('.navbar-nav li.dropdown').hover(
+        function () {
+            console.log("Hover In"); // Add a debug message
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
+        },
+        function () {
+            console.log("Hover Out"); // Add a debug message
+            $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
+        }
+    );
+});	

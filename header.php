@@ -21,7 +21,10 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+
 <?php wp_body_open(); ?>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'sorrisodambrosio' ); ?></a>
 
@@ -39,7 +42,6 @@
 							<?php
 						else :
 							?>
-							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 							<?php
 						endif;
 						$sorrisodambrosio_description = get_bloginfo( 'description', 'display' );
@@ -54,8 +56,8 @@
 			    <span class="navbar-toggler-icon"></span>
 				</button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">	
-				<div class="container">
+			<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">	
+				
 					<?php
 					wp_nav_menu(
 						array(
@@ -63,15 +65,14 @@
 							'menu_id'        => 'primary-menu',
 							'depth'           => 2, // 1 = no dropdowns, 2 = with dropdowns.
 							'container'       => 'div',
-							'container_class' => 'collapse navbar-collapse',
 							'container_id'    => 'bs-example-navbar-collapse-1',
-							'menu_class'      => 'navbar-nav mr-auto',
+							'menu_class'      => 'navbar-nav m-auto',
 							'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
 							'walker'          => new WP_Bootstrap_Navwalker(),
 						)
 					);
-					?>	
-				</div>
+					get_search_form();
+					?>
 			</div>
 		</nav><!-- #site-navigation -->
 		
