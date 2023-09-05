@@ -25,6 +25,16 @@
 				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sorrisodambrosio' ), 'sorrisodambrosio', '<a href="http://underscores.me/">Underscores.me</a>' );
 				?>
 		</div><!-- .site-info -->
+		<?php
+		wp_nav_menu(
+						array(
+							'theme_location' => 'dambrosio-footer-menu',
+							'menu_id'        => 'footer-menu',
+							
+						)
+					);
+					// get_search_form();
+					?>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -6,11 +6,12 @@
 */
 ?>
 
+<div <div data-aos="fade-left">
 <!-- wp:columns {"align":"full"} -->
-<div class="wp-block-columns alignfull data-aos="fade-left""><!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"1em","right":"1em","bottom":"1em","left":"1em"}}}} -->
-<div class="wp-block-column is-vertically-aligned-center" data-aos="fade-left" style="padding-top:1em;padding-right:1em;padding-bottom:1em;padding-left:1em"><!-- wp:columns -->
-<div class="wp-block-columns" data-aos="fade-left"><!-- wp:column {"width":"600px"} -->
-<div class="wp-block-column" data-aos="fade-left" style="flex-basis:600px"><!-- wp:heading {"textAlign":"center","style":{"typography":{"textTransform":"uppercase","fontSize":"22px"}},"backgroundColor":"white","textColor":"vivid-cyan-blue"} -->
+<div class="wp-block-columns alignfull"><!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"1em","right":"1em","bottom":"1em","left":"1em"}}}} -->
+<div class="wp-block-column is-vertically-aligned-center" style="padding-top:1em;padding-right:1em;padding-bottom:1em;padding-left:1em"><!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column {"width":"600px"} -->
+<div class="wp-block-column" style="flex-basis:600px"><!-- wp:heading {"textAlign":"center","style":{"typography":{"textTransform":"uppercase","fontSize":"22px"}},"backgroundColor":"white","textColor":"vivid-cyan-blue"} -->
 <h2 class="wp-block-heading has-text-align-center has-vivid-cyan-blue-color has-white-background-color has-text-color has-background" style="font-size:22px;text-transform:uppercase"><strong>ORTODONZIA FISSA</strong></h2>
 <!-- /wp:heading -->
 
@@ -45,6 +46,7 @@
 <!-- /wp:cover --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
+</div>
 
 
 

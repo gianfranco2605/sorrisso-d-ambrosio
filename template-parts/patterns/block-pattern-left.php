@@ -5,7 +5,7 @@
  * @package sorrisodambrosio
 */
 ?>
-                <div data-aos="zoom-in" data-aos-duration="10000">
+                <div data-aos="fade-right">
 				<!-- wp:columns {"align":"full"} -->
 				<div class="wp-block-columns alignfull"><!-- wp:column {"width":"50%"} -->
 				<div class="wp-block-column" style="flex-basis:50%"><!-- wp:cover {"customOverlayColor":"#f6f6f6","minHeight":600,"isDark":false,"align":"center","style":{"color":{"duotone":"unset"}}} -->
