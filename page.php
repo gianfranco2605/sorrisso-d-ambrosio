@@ -15,6 +15,12 @@
 get_header();
 ?>
 
+	<header class="entry-header">
+			
+			<?php the_title( '<h1 class="entry-title ml2">', '</h1>' ); ?>
+
+	</header><!-- .entry-header -->
+
 	<main id="primary" class="site-main container">
    
 		<?php

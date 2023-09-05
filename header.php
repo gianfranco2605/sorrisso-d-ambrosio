@@ -16,6 +16,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 
 	<?php wp_head(); ?>
 </head>
@@ -71,9 +73,8 @@
 							'walker'          => new WP_Bootstrap_Navwalker(),
 						)
 					);
-					get_search_form();
+					// get_search_form();
 					?>
 			</div>
 		</nav><!-- #site-navigation -->
-		
 	</header><!-- #masthead -->

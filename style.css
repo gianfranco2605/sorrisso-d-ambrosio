@@ -638,6 +638,21 @@ textarea {
 }
 
 /*--------------------------------------------------------------
+# Entry Title
+--------------------------------------------------------------*/
+
+.entry-title {
+	background-color: #9FBFCC;
+	color: #fff;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* border-bottom: 2px solid red; */
+	border-top: 2px solid red;
+}
+
+/*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
 
@@ -740,6 +755,27 @@ textarea {
 	text-align: end;
 	flex: 1 0 50%;
 }
+
+/* Nav border bottom */
+
+.menu-item a {
+	float: left;
+	display: block;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	border-bottom: 3px solid transparent;
+  }
+  
+  .menu-item a:hover {
+	border-bottom: 3px solid red;
+  }
+  
+  /* i guess need some script */
+  .menu-item a.active {
+	border-bottom: 3px solid red;
+  }
 
 /* Posts and pages
 --------------------------------------------- */
@@ -1017,4 +1053,28 @@ textarea {
 ul .menu-item .nav-link span {
 	font-size: .8rem;
 }
+
+/* pattern images 
+ */
+
+ .my-slider-block .wp-block-image img {
+    width: 300px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.post-thumbnail {
+	filter: brightness(50%);
+}
+
+/* .ml2 {
+	font-weight: 900;
+	
+  }
+  
+  .ml2 .letter {
+	display: inline-block;
+	line-height: 1em;
+  } */
+
 

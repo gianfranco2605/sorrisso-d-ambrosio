@@ -198,3 +198,68 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+//Block patterns
+function register_slider_block_pattern() {
+    if ( function_exists( 'register_block_pattern' ) ) {
+
+		ob_start();
+
+		get_template_part( 'template-parts/patterns/block-pattern-left' );
+
+		$block_content_left = ob_get_contents();
+
+		ob_end_clean();
+
+        register_block_pattern(
+            'block/left',
+            array(
+                'title'       => esc_html__( 'Block Pattern Left', 'sorrisodambrosio' ),
+                'description' => esc_html__( 'Block Pattern Left with image, title, and text', 'sorrisodambrosio' ),
+				'categories' => ['block-pattern-left'],
+                'content'     => $block_content_left,
+            )
+        );
+
+		ob_start();
+
+		get_template_part( 'template-parts/patterns/block-pattern-right' );
+
+		$block_content_right = ob_get_contents();
+
+		ob_end_clean();
+
+		register_block_pattern(
+            'block/right',
+            array(
+                'title'       => esc_html__( 'Block Pattern Right', 'sorrisodambrosio' ),
+                'description' => esc_html__( 'Block Pattern Right with  title, text and image', 'sorrisodambrosio' ),
+				'categories' => ['block-pattern-right'],
+                'content'     => $block_content_right,
+            )
+        );
+    }
+}
+add_action( 'init', 'register_slider_block_pattern' );
+
+// Patterns categories
+function register_block_pattern_categories( ) {
+
+	$pattern_categories = array( 
+		'block-pattern-left' => esc_html__( 'Block Pattern Left' ),
+		'block-pattern-right' => esc_html__( 'Block Pattern right' ),
+		// another category
+	);
+
+	if ( ! empty( $pattern_categories ) && is_array( $pattern_categories ) ) {
+		foreach( $pattern_categories as $pattern_category => $pattern_category_label ) {
+			register_block_pattern_category(
+				$pattern_category, array(
+					'label' => $pattern_category_label,
+				)
+			);
+		}
+	}
+}
+add_action( 'init', 'register_block_pattern_categories' );
+
